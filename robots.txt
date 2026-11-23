@@ -1,5 +1,4 @@
 User-agent: *
 Allow: /
 
-# Update with your live domain once hosted:
-# Sitemap: https://yourdomain.com/sitemap.xml
+Sitemap: https://optima-total-service.syafiq-killer94.workers.dev/sitemap.xml
