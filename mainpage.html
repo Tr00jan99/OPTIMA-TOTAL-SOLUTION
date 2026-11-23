@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OPTIMA | Welcome</title>
+    <link rel="icon" type="image/png" href="optima.png">
+    <meta name="description"
+        content="Welcome to OPTIMA TOTAL SOLUTION — electrical, plumbing, networking and CCTV services in Johor Bahru, Johor.">
+    <meta name="theme-color" content="#0b0e14">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Outfit:wght@700;800;900&display=swap"
+        rel="stylesheet">
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="index.css"> 
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            background-color: #0b0e14;
+            overflow: hidden;
+            /* Prevent scrolling on intro */
+        }
+
+        /* Ensure intro layer is visible and positioned correctly */
+        #intro-layer {
+            position: fixed;
+            width: 100vw;
+            height: 100vh;
+        }
+
+        .logo-container {
+            margin-bottom: 30px;
+            position: relative;
+            display: inline-block;
+        }
+
+        .main-logo-glow {
+            width: 100%;
+            max-width: min(400px, 80vw);
+            /* Keep comfortably within narrow mobile viewports during pulse scale */
+            height: auto;
+            filter: drop-shadow(0 0 20px rgba(240, 180, 41, 0.6)) drop-shadow(0 0 40px rgba(240, 180, 41, 0.4));
+            animation: logoPulse 3s infinite alternate;
+        }
+
+        @keyframes logoPulse {
+            0% {
+                filter: drop-shadow(0 0 20px rgba(240, 180, 41, 0.6)) drop-shadow(0 0 40px rgba(240, 180, 41, 0.4));
+                transform: scale(1);
+            }
+
+            100% {
+                filter: drop-shadow(0 0 30px rgba(255, 215, 0, 0.8)) drop-shadow(0 0 60px rgba(240, 180, 41, 0.6));
+                transform: scale(1.05);
+            }
+        }
+
+        .total-services {
+            font-family: 'Outfit', sans-serif;
+            margin-top: -20px;
+            margin-bottom: 50px;
+            font-size: 2rem;
+            letter-spacing: 12px;
+            color: #fff;
+            text-shadow: 0 0 10px rgba(240, 180, 41, 0.5);
+        }
+    </style>
+</head>
+
+<body>
+    
+    <div id="intro-layer">
+        <div class="intro-half intro-left"></div>
+        <div class="intro-half intro-right"></div>
+        <div class="intro-content">
+            <div class="logo-container">
+                <img src="optima.png" alt="OPTIMA Logo" class="main-logo-glow" width="450" height="400" data-first-viewport>
+            </div>
+            
+            <button type="button" id="enter-site-btn" class="glow-arrow-btn" aria-label="Enter OPTIMA TOTAL SOLUTION website">
+                <i class="fas fa-arrow-right" aria-hidden="true"></i>
+            </button>
+        </div>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const enterBtn = document.getElementById('enter-site-btn');
+            const introLayer = document.getElementById('intro-layer');
+
+            if (enterBtn && introLayer) {
+                enterBtn.addEventListener('click', () => {
+                    // Trigger 3D Tear Animation
+                    introLayer.classList.add('tear-open');
+
+                    // Redirect to index.html after animation matches CSS transition (1.5s)
+                    setTimeout(() => {
+                        window.location.href = 'index.html';
+                    }, 1400);
+                });
+            }
+        });
+    </script>
+</body>
+
+</html>
