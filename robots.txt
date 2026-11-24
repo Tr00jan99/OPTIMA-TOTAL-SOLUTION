@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://optima-solution.syafiq-killer94.workers.dev/sitemap.xml
+Sitemap: https://optima-total-solution.pages.dev/sitemap.xml
